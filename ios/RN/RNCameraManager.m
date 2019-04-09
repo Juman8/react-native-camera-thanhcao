@@ -207,41 +207,41 @@ RCT_CUSTOM_VIEW_PROPERTY(pictureSize, NSString *, RNCamera)
 RCT_CUSTOM_VIEW_PROPERTY(faceDetectorEnabled, BOOL, RNCamera)
 {
     view.isDetectingFaces = [RCTConvert BOOL:json];
-    [view updateFaceDetecting:json];
+    // [view updateFaceDetecting:json];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(faceDetectionMode, NSInteger, RNCamera)
 {
-    [view updateFaceDetectionMode:json];
+    // [view updateFaceDetectionMode:json];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(faceDetectionLandmarks, NSString, RNCamera)
 {
-    [view updateFaceDetectionLandmarks:json];
+    // [view updateFaceDetectionLandmarks:json];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(faceDetectionClassifications, NSString, RNCamera)
 {
-    [view updateFaceDetectionClassifications:json];
+    // [view updateFaceDetectionClassifications:json];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(barCodeScannerEnabled, BOOL, RNCamera)
 {
     
     view.isReadingBarCodes = [RCTConvert BOOL:json];
-    [view setupOrDisableBarcodeScanner];
+    // [view setupOrDisableBarcodeScanner];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(barCodeTypes, NSArray, RNCamera)
 {
-    [view setBarCodeTypes:[RCTConvert NSArray:json]];
+    // [view setBarCodeTypes:[RCTConvert NSArray:json]];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(textRecognizerEnabled, BOOL, RNCamera)
 {
     
     view.canReadText = [RCTConvert BOOL:json];
-    [view setupOrDisableTextDetector];
+    // [view setupOrDisableTextDetector];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(defaultVideoQuality, NSInteger, RNCamera)
@@ -335,7 +335,7 @@ RCT_EXPORT_METHOD(pausePreview:(nonnull NSNumber *)reactTag)
         if (![view isKindOfClass:[RNCamera class]]) {
             RCTLogError(@"Invalid view returned from registry, expecting RNCamera, got: %@", view);
         } else {
-            [view pausePreview];
+            // [view pausePreview];
         }
     }];
 }
